@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee. | Fresh Coffee</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts Links For Icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">Coffee<span>.</span></a>
+
+            <button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-links">
+                <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+            </button>
+
+            <ul class="menu-links" id="menu-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero-section" id="home">
+            <div class="content">
+                <h1>Fresh Coffee</h1>
+                <p>
+                    Kopi adalah minuman yang dibuat dari biji kopi yang telah dipanggang. Biji kopi berasal dari buah kopi yang disebut ceri kopi. Proses pembuatan kopi melibatkan beberapa tahap, termasuk pemetikan, pengeringan, pemanggangan, dan penggilingan biji kopi
+                    sebelum diseduh menjadi minuman yang nikmat.
+                </p>
+                <a href="#menu" class="btn">Order Now</a>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about" id="about">
+            <div class="container about-grid">
+                <div class="about-copy">
+                    <h2 class="section-title">Setiap cangkir melewati lima tahap.</h2>
+                    <p>
+                        Kami percaya rasa kopi ditentukan jauh sebelum air panas menyentuh bubuknya. Karena itu kami memperhatikan setiap tahap, dari kebun sampai ke meja Anda.
+                    </p>
+                </div>
+
+                <ol class="steps">
+                    <li>
+                        <h3>Pemetikan</h3>
+                        <p>Ceri kopi dipetik saat sudah matang merah, satu per satu.</p>
+                    </li>
+                    <li>
+                        <h3>Pengeringan</h3>
+                        <p>Ceri dijemur sampai kadar airnya stabil dan siap disimpan.</p>
+                    </li>
+                    <li>
+                        <h3>Pemanggangan</h3>
+                        <p>Biji disangrai untuk memunculkan aroma dan rasa khasnya.</p>
+                    </li>
+                    <li>
+                        <h3>Penggilingan</h3>
+                        <p>Biji digiling sesaat sebelum diseduh agar aromanya tetap utuh.</p>
+                    </li>
+                    <li>
+                        <h3>Penyeduhan</h3>
+                        <p>Takaran dan suhu air yang tepat mengubahnya jadi secangkir kopi.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- MENU -->
+        <section class="menu" id="menu">
+            <div class="container">
+                <div class="menu-head">
+                    <h2 class="section-title">Menu</h2>
+                    <div class="tabs" role="tablist" aria-label="Kategori menu">
+                        <button class="tab" type="button" role="tab" id="tab-kopi" aria-controls="panel-kopi" aria-selected="true" tabindex="0">Kopi</button>
+                        <button class="tab" type="button" role="tab" id="tab-nonkopi" aria-controls="panel-nonkopi" aria-selected="false" tabindex="-1">Non-kopi</button>
+                        <button class="tab" type="button" role="tab" id="tab-camilan" aria-controls="panel-camilan" aria-selected="false" tabindex="-1">Camilan</button>
+                    </div>
+                </div>
+
+                <div class="tab-panel" role="tabpanel" id="panel-kopi" aria-labelledby="tab-kopi">
+                    <ul class="menu-list">
+                        <li>
+                            <div class="item-head"><span class="item-name">Espresso</span><span class="leader" aria-hidden="true"></span><span class="price">Rp18.000</span></div>
+                            <p class="item-desc">Satu shot pekat dengan crema tebal.</p>
+                        </li>
+                        <li>
+                            <div class="item-head"><span class="item-name">Americano</span><span class="leader" aria-hidden="true"></span><span class="price">Rp22.000</span></div>
+                            <p class="item-desc">Espresso dengan air panas, ringan dan bersih.</p>
+                        </li>
+                        <li>
+                            <div class="item-head"><span class="item-name">Kopi susu gula aren</span><span class="leader" aria-hidden="true"></span><span class="price">Rp26.000</span></div>
+                            <p class="item-desc">Espresso, susu segar, dan gula aren cair.</p>
+                        </li>
+                        <li>
+                            <div class="item-head"><span class="item-name">Cappuccino</span><span class="leader" aria-hidden="true"></span><span class="price">Rp28.000</span></div>
+                            <p class="item-desc">Espresso dengan susu kukus dan busa tebal.</p>
+                        </li>
+                        <li>
+                            <div class="item-head"><span class="item-name">V60 manual brew</span><span class="leader" aria-hidden="true"></span><span class="price">Rp30.000</span></div>
+                            <p class="item-desc">Diseduh tangan dari biji pilihan kami hari itu.</p>
+                        </li>
+                        <li>
+                            <div class="item-head"><span class="item-name">Affogato</span><span class="leader" aria-hidden="true"></span><span class="price">Rp32.000</span></div>
+                            <p class="item-desc">Es krim vanila disiram espresso panas.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tab-panel" role="tabpanel" id="panel-nonkopi" aria-labelledby="tab-nonkopi">
+                    <ul class="menu-list">
+                        <li>
+                            <div class="item-head"><span class="item-name">Cokelat panas</span><span class="leader" aria-hidden="true"></span><span class="price">Rp26.000</span></div>
+                            <p class="item-desc">Cokelat batangan yang dilelehkan bersama susu.</p>
+                        </li>
+                        <li>
+                            <div class="item-head"><span class="item-name">Matcha latte</span><span class="leader" aria-hidden="true"></span><span class="price">Rp28.000</span></div>
+                            <p class="item-desc">Matcha dan susu, disajikan panas atau dingin.</p>
+                        </li>
+                        <li>
+                            <div class="item-head"><span class="item-name">Teh tarik</span><span class="leader" aria-hidden="true"></span><span class="price">Rp20.000</span></div>
+                            <p class="item-desc">Teh hitam pekat dengan susu manis, ditarik sampai berbusa.</p>
+                        </li>
+                        <li>
+                            <div class="item-head"><span class="item-name">Jeruk peras</span><span class="leader" aria-hidden="true"></span><span class="price">Rp18.000</span></div>
+                            <p class="item-desc">Jeruk segar dan es, tanpa tambahan gula.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tab-panel" role="tabpanel" id="panel-camilan" aria-labelledby="tab-camilan">
+                    <ul class="menu-list">
+                        <li>
+                            <div class="item-head"><span class="item-name">Roti bakar cokelat</span><span class="leader" aria-hidden="true"></span><span class="price">Rp20.000</span></div>
+                            <p class="item-desc">Roti tebal, cokelat leleh, dan sedikit garam.</p>
+                        </li>
+                        <li>
+                            <div class="item-head"><span class="item-name">Pisang goreng</span><span class="leader" aria-hidden="true"></span><span class="price">Rp18.000</span></div>
+                            <p class="item-desc">Pisang kepok berbalut tepung renyah dan gula halus.</p>
+                        </li>
+                        <li>
+                            <div class="item-head"><span class="item-name">Croissant mentega</span><span class="leader" aria-hidden="true"></span><span class="price">Rp24.000</span></div>
+                            <p class="item-desc">Berlapis-lapis, disajikan hangat dari oven.</p>
+                        </li>
+                        <li>
+                            <div class="item-head"><span class="item-name">Brownies panggang</span><span class="leader" aria-hidden="true"></span><span class="price">Rp22.000</span></div>
+                            <p class="item-desc">Cokelat pekat, tepi renyah, tengah lembap.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact" id="contact">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <h2 class="section-title">Mampir, atau kirim pesan dulu.</h2>
+
+                    <dl class="info-list">
+                        <div>
+                            <dt>Alamat</dt>
+                            <dd>Jl. Kopi Raya No. 12</dd>
+                        </div>
+                        <div>
+                            <dt>Jam buka</dt>
+                            <dd>Senin–Jumat, 07.00–22.00<br>Sabtu–Minggu, 08.00–23.00</dd>
+                        </div>
+                        <div>
+                            <dt>WhatsApp</dt>
+                            <dd><a href="https://wa.me/6281200000000">0812-0000-0000</a></dd>
+                        </div>
+                        <div>
+                            <dt>Email</dt>
+                            <dd><a href="mailto:halo@coffee.id">halo@coffee.id</a></dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+                    <div class="field">
+                        <label for="name">Nama</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Kirim lewat WhatsApp</button>
+                    <p class="form-note">Pesan akan terbuka di WhatsApp. Anda tinggal menekan kirim.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-row">
+            <a href="#home" class="logo">Coffee<span>.</span></a>
+            <p>&copy; <span id="year">2026</span> Coffee. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+</body>
+</html>
