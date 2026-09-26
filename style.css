@@ -515,6 +515,15 @@ footer p {
     }
 }
 
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 96px 20px 48px;
+    /* background: url("coffee-hero-bg.jpg") center / cover no-repeat; */
+    background: var(--bg); /* fallback color */
+}
+
 @media screen and (max-width: 700px) {
     .menu-list {
         grid-template-columns: 1fr;
