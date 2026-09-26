@@ -503,10 +503,12 @@ footer p {
     }
 
     /* keep hero text readable when the cup sits behind it */
-    .hero-section {
+ .hero-section {
+        min-height: 70vh;
         background:
             linear-gradient(90deg, rgba(14, 12, 11, 0.9), rgba(14, 12, 11, 0.55)),
-            url("coffee-hero-bg.jpg") 72% center / cover no-repeat;
+            url("coffee-hero-bg.jpg") center / contain no-repeat;
+        background-attachment: scroll;
     }
 
     .about-grid,
