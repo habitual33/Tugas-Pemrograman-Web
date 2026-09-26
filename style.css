@@ -164,7 +164,7 @@ header.scrolled::before {
     padding: 110px 20px 60px;
     background:
         linear-gradient(90deg, rgba(14, 12, 11, .85), rgba(14, 12, 11, .35)),
-        url('coffee-hero-bg.jpg') center / cover no-repeat;
+    url('coffee-hero-bg.jpg') center / cover no-repeat;
 }
 
 .hero-section .content {
