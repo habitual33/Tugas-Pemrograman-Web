@@ -7,32 +7,16 @@ const onScroll = () => {
 onScroll();
 window.addEventListener('scroll', onScroll, { passive: true });
 
-// ---------- Mobile menu ----------
-const toggle = document.querySelector('.menu-toggle');
-const menuLinks = document.querySelector('#menu-links');
-const toggleIcon = toggle.querySelector('.material-symbols-outlined');
-
-const setMenu = (open) => {
-    menuLinks.classList.toggle('open', open);
-    toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
-    toggleIcon.textContent = open ? 'close' : 'menu';
-};
-
-toggle.addEventListener('click', () => {
-    setMenu(!menuLinks.classList.contains('open'));
-});
-
-// Close after choosing a link, clicking outside, or pressing Escape
-menuLinks.addEventListener('click', (e) => {
-    if (e.target.closest('a')) setMenu(false);
-});
-document.addEventListener('click', (e) => {
-    if (!e.target.closest('.navbar')) setMenu(false);
-});
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') setMenu(false);
-});
+// Close the mobile menu after choosing a link
+const menuLinksCollapseEl = document.querySelector('#menu-links');
+if (menuLinksCollapseEl && window.bootstrap) {
+    const bsCollapse = window.bootstrap.Collapse.getOrCreateInstance(menuLinksCollapseEl, { toggle: false });
+    menuLinksCollapseEl.addEventListener('click', (e) => {
+        if (e.target.closest('a') && menuLinksCollapseEl.classList.contains('show')) {
+            bsCollapse.hide();
+        }
+    });
+}
 
 // ---------- Menu tabs (Kopi / Non-kopi / Camilan) ----------
 const tabs = [...document.querySelectorAll('.tab')];
