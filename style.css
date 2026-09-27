@@ -115,11 +115,13 @@ header.scrolled::before {
 }
 
 .navbar {
+    padding: 0;
+}
+
+.navbar-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: min(100%, 1200px);
-    margin: auto;
 }
 
 .logo {
@@ -131,30 +133,35 @@ header.scrolled::before {
     color: var(--accent);
 }
 
+.navbar-brand {
+    margin-right: 0;
+}
+
 .menu-links {
-    display: flex;
     gap: 32px;
 }
 
-.menu-links a {
+.menu-links .nav-link {
+    padding: 0;
     color: #fff;
-    text-decoration: none;
 }
 
-.menu-links a:hover {
+.menu-links .nav-link:hover,
+.menu-links .nav-link:focus {
     color: var(--accent);
 }
 
-.menu-toggle {
-    display: none;
-    border: 0;
-    background: transparent;
-    color: #fff;
-    cursor: pointer;
+.navbar-toggler {
+    padding: 4px 8px;
+    border-color: var(--line);
 }
 
-.menu-toggle .material-symbols-outlined {
-    font-size: 30px;
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(255, 180, 0, .35);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(243, 236, 226, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .hero-section {
@@ -382,6 +389,25 @@ footer .logo {
     font-size: 1.5rem;
 }
 
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        margin-top: 16px;
+        padding: 20px 24px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+    }
+
+    .menu-links {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .menu-links .nav-link {
+        font-size: 1.2rem;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         width: min(100% - 32px, 600px);
@@ -389,36 +415,6 @@ footer .logo {
 
     header {
         padding: 14px 16px;
-    }
-
-    .menu-toggle {
-        display: block;
-        position: relative;
-        z-index: 2;
-    }
-
-    .menu-links {
-        position: fixed;
-        inset: 0 0 0 auto;
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        width: min(280px, 82vw);
-        padding: 100px 28px 28px;
-        background: var(--surface);
-        border-left: 1px solid var(--line);
-        transform: translateX(100%);
-        visibility: hidden;
-        transition: transform .25s ease, visibility .25s ease;
-    }
-
-    .menu-links.open {
-        transform: translateX(0);
-        visibility: visible;
-    }
-
-    .menu-links a {
-        font-size: 1.2rem;
     }
 
     .hero-section {
